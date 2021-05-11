@@ -33,8 +33,8 @@ export default function Room({ route, navigation }) {
       {itemsArray.length > 0 && (
         <Tab.Navigator tabBarOptions={{
           labelStyle: {
-            fontSize: 20,
-            padding: 10,
+            fontSize: 16,
+            padding: 8,
           },
         }}>
           {

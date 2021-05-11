@@ -28,7 +28,7 @@ export const Rooms = [
       },
       {
         id: 1,
-        name: "Air-conditioner",
+        name: "Sofa",
         active: true
       }
     ]
@@ -38,8 +38,11 @@ export const Rooms = [
 export const DEFAULT_ITEMS = [
   { name: "TV", active: true},
   { name: "Laptop", active: true },
-  { name: "air-conditioner", active: true },
-  { name: "fridge", active: true },
-  { name: "owe", active: true }
+  { name: "Bed", active: true },
+  { name: "Fridge", active: true },
+  { name: "Owe", active: true },
+  { name: "Sofa", active: true },
+  { name: "Iron", active: true },
+  { name: "Chair", active: true },
 ];
 

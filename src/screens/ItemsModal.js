@@ -25,7 +25,8 @@ const ItemsModal = ({ route, navigation }) => {
     const newItemName = itemsAdd.name;
     let roomItem = roomItemsState.find(e=>e.name === newItemName);
     roomItem.active = value;
-    setRoomItems(roomItemsState);
+    setRoomItems([...roomItemsState]);
+    //setRoomItems(roomItemsState); //not works
   },[]);
 
 
@@ -41,14 +42,12 @@ const ItemsModal = ({ route, navigation }) => {
      
       {
         roomItems.map(roomItem => (
-          roomItem.active && (
-            <View style={styles.item}>
-              <Text>{roomItem.name}</Text>
-              <Switch
-                value={roomItem.active}
-                onValueChange={(selected) => { handleValueChange(selected, roomItem) }} />
-            </View>
-          )
+          <View style={styles.item}>
+            <Text>{roomItem.name}</Text>
+            <Switch
+              value={roomItem.active}
+              onValueChange={(selected) => { handleValueChange(selected, roomItem) }} />
+          </View>
         ))
       }
 
